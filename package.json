@@ -1,0 +1,24 @@
+{
+  "name": "zookeepr",
+  "version": "1.0.0",
+  "description": "UCLA Extension Full Stack Developer Bootcamp module 11 project. Using Express.js, Heroku, HTML, CSS, Javascript, Server-side, and Insomnia.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Niksharpkings/zookeepr.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Niksharpkings/zookeepr/issues"
+  },
+  "homepage": "https://github.com/Niksharpkings/zookeepr#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
