@@ -134,6 +134,19 @@
         "goofy"
       ],
       "id": "12"
+    },
+    {
+      "name": "Quaker2",
+      "species": "Bird",
+      "diet": "herbivore",
+      "personalityTraits": [
+        "hungry",
+        "zany",
+        "anxious",
+        "loving",
+        "goofy"
+      ],
+      "id": "13"
     }
   ]
 }
