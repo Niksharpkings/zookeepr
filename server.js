@@ -6,13 +6,12 @@ const { animals } = require('./data/animals');
 const PORT = process.env.PORT || 3001;
 const app = express();
 
+//Express.js middleware that instructs the server to make certain files readily available and to not gate it behind a server endpoint.
+app.use(express.static('public'));
 // parse incoming string or array data
 app.use(express.urlencoded({ extended: true }));
 // parse incoming JSON data
 app.use(express.json());
-//Express.js middleware that instructs the server to make certain files readily available and to not gate it behind a server endpoint.
-app.use(express.static('public'));
-
 
 function filterByQuery(query, animalsArray) {
   let personalityTraitsArray = [];
@@ -83,7 +82,7 @@ function validateAnimal(animal) {
   if (!animal.diet || typeof animal.diet !== 'string') {
     return false;
   }
-  if (!animal.personalityTraits || typeof animal.personalityTraits !== 'string') {
+  if (!animal.personalityTraits || !Array.isArray(animal.personalityTraits)) {
     return false;
   }
   return true;
@@ -99,7 +98,11 @@ app.get('/api/animals', (req, res) => {
 
 app.get('/api/animals/:id', (req, res) => {
   const result = findById(req.params.id, animals);
-  res.status(404).json(result);
+  if (result) {
+    res.json(result);
+  } else {
+    res.send(404);
+  }
 });
 
 app.post('/api/animals', (req, res) => {
