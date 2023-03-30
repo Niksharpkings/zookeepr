@@ -1,6 +1,9 @@
 # zookeepr
 UCLA Extension Full Stack Developer Bootcamp module 11 project. Using Express.js, Heroku, HTML, CSS, Javascript, Server-side, and Insomnia. 
 
+## !Warning! Important updated note:
+> Heroku no longer supports free mangosDB mySQL database system since Nov 2022.
+Thus, deployed link and app no longer function unless it's runned thru local host only at the time being. Currently looking for a free public or open souced alternative for hosting this repo live site
 
 Title: Create a web server
 
